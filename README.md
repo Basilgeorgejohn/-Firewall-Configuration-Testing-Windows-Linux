@@ -62,3 +62,32 @@ If the rule is set to Allow, the connection should succeed.
 
 If set to Block, the connection should fail.
 
+### **2**  Linux Firewall – Configuring & Testing Ports 22 and 23 (Terminal Method)
+
+![N1-0702-Configuring-Firewalls-for-Linux-blog-image-r6p4rdkq991d5206cfq1hj1poignymzrqdc8nrj0c2](https://github.com/user-attachments/assets/2c58a4cd-ccb8-4f1c-a876-dfbfc85a3c8c)
+
+1. Using UFW (Ubuntu/Debian)
+Check if UFW is installed & enabled
+
+
+       sudo ufw status
+If inactive, enable it:
+
+    sudo ufw enable
+Allow Ports 22 and 23
+
+    sudo ufw allow 22/tcp
+    sudo ufw allow 23/tcp
+    Block Ports 22 and 23
+
+    sudo ufw deny 22/tcp
+    sudo ufw deny 23/tcp
+Delete Rules
+
+    sudo ufw delete allow 22/tcp
+    sudo ufw delete allow 23/tcp
+View Current Rules
+
+    sudo ufw status verbose
+
+
